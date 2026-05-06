@@ -1,65 +1,100 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+import ParallaxHeroImage from "@/components/ParallaxHeroImage";
+import Reveal from "@/components/Reveal";
+import { site } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Beyond Balance brings grounded yoga experiences for busy professionals and corporate teams.",
+};
+
+const quickLinks = [
+  { label: "Classes", href: "/classes" },
+  { label: "Private Sessions", href: "/services" },
+  { label: "Corporate", href: "/services" },
+  { label: "Retreats", href: "/services" },
+  { label: "Events", href: "/events" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <section className="hero">
+        <ParallaxHeroImage
+          src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1700&q=80"
+          alt="Sunlit yoga practice with nature in background"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <div className="hero-content">
+          <p className="label text-[var(--color-ink-soft)]">Corporate wellness and private yoga</p>
+          <h1 className="mt-3 max-w-3xl font-display text-5xl leading-[1.05] sm:text-6xl">
+            Find steadiness in the middle of ambitious lives.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-5 max-w-xl text-base text-[var(--color-ink-soft)]/90 sm:text-lg">
+            Beyond Balance helps professionals and teams reset, recover, and return to work with
+            calm focus through thoughtfully guided yoga experiences.
           </p>
+          <a className="cta-button mt-8" href={site.bookingUrl} target="_blank" rel="noreferrer">
+            Book with Me
+          </a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      </section>
+
+      <section className="section-wrap">
+        <Reveal>
+          <p className="label">Our philosophy</p>
+          <p className="mt-4 max-w-3xl font-display text-4xl leading-tight text-[var(--color-ink)]">
+            Wellness should feel deeply personal, quietly luxurious, and fully livable in real
+            life.
+          </p>
+          <p className="mt-4 max-w-2xl text-[var(--color-ink-muted)]">
+            Sessions are designed to honor your pace while building the strength, breath, and
+            spaciousness that sustain both career and home life. The approach is warm, practical,
+            and rooted in modern mindfulness.
+          </p>
+        </Reveal>
+      </section>
+
+      <section className="section-wrap pt-0">
+        <Reveal className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+          {quickLinks.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="rounded-3xl border border-[var(--color-line)] bg-[var(--color-surface)] p-6 transition hover:-translate-y-1"
+            >
+              <p className="label">Explore</p>
+              <h2 className="mt-3 font-display text-3xl">{item.label}</h2>
+            </Link>
+          ))}
+        </Reveal>
+      </section>
+
+      <section className="section-wrap pt-0">
+        <Reveal className="grid gap-8 rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-8 md:grid-cols-[1.2fr_1fr] md:p-10">
+          <div>
+            <p className="label">Featured words</p>
+            <blockquote className="mt-4 max-w-xl font-display text-4xl leading-tight">
+              “I booked Beyond Balance for our leadership team, and the shift in energy was
+              immediate — grounded, clear, and connected.”
+            </blockquote>
+            <p className="mt-4 text-sm uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">
+              Jordan A. · People Operations Director
+            </p>
+          </div>
+          <div className="relative min-h-72 overflow-hidden rounded-3xl">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80"
+              alt="Calm studio corner with yoga mats"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          </div>
+        </Reveal>
+      </section>
+    </>
   );
 }
