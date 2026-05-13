@@ -26,7 +26,7 @@ export default function Home() {
           </h1>
           <p className="mt-5 max-w-xl text-base text-[var(--color-ink-soft)]/90 sm:text-lg">
             Beyond Balance helps professionals and teams reset, recover, and return to work with
-            calm focus through thoughtfully guided yoga experiences.
+            calm focus through thoughtfully guided yoga experiences
           </p>
           <a className="cta-button mt-8" href={site.bookingUrl} target="_blank" rel="noreferrer">
             Book with Me

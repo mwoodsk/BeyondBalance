@@ -30,7 +30,6 @@ const packages = [
   { name: "Single Class", price: "$28", detail: "Drop-in studio or virtual" },
   { name: "5-Class Pack", price: "$130", detail: "Valid for 8 weeks" },
   { name: "10-Class Pack", price: "$240", detail: "Best for consistency" },
-  { name: "Monthly Unlimited", price: "$220", detail: "Includes one private check-in" },
 ];
 
 export default function ClassesPage() {

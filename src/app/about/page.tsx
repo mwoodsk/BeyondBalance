@@ -21,7 +21,7 @@ export default function AboutPage() {
     <div className="section-wrap">
       <Reveal>
         <p className="label">About me</p>
-        <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Hi, I&apos;m Eliza.</h1>
+        <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Hi, I&apos;m Aspen.</h1>
         <p className="mt-5 max-w-3xl text-lg text-[var(--color-ink-muted)]">
           I started Beyond Balance because I wanted yoga to feel less performative and more
           nourishing. If we were meeting for coffee, I&apos;d tell you I care most about helping
