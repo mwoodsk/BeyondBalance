@@ -75,7 +75,7 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-[2rem] border border-[var(--color-line)]">
             <iframe
               title="Beyond Balance location map"
-              src="https://www.google.com/maps?q=1212+W+Evergreen+Ave+Chicago+IL&output=embed"
+              src="https://www.google.com/maps?q=175+E+Delaware+Pl+Chicago+IL&output=embed"
               width="100%"
               height="320"
               loading="lazy"
