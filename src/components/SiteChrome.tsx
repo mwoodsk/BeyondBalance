@@ -99,34 +99,35 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
       </main>
 
       <footer className="site-footer">
-        <div>
-          <h2 className="font-display text-3xl">Beyond Balance</h2>
-          <p className="mt-3 max-w-sm text-sm text-[var(--color-ink-muted)]">
-            Personalized yoga for high-performing people who want to feel grounded,
-            present, and deeply well.
-          </p>
-        </div>
+        <div className="site-footer-columns">
+          <div className="site-footer-contact-col">
+            <p>{site.address}</p>
+            <p>
+              <a href={`tel:${site.phone.replace(/[^\d]/g, "")}`}>{site.phone}</a>
+            </p>
+            <p>
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+            </p>
+            <div className="social-row" aria-label="Social media links">
+              <a href={site.social.instagram} aria-label="Instagram" target="_blank" rel="noreferrer">
+                <SocialIcon label="IG" />
+              </a>
+              <a href={site.social.facebook} aria-label="Facebook" target="_blank" rel="noreferrer">
+                <SocialIcon label="FB" />
+              </a>
+              <a href={site.social.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer">
+                <SocialIcon label="IN" />
+              </a>
+            </div>
+          </div>
 
-        <div className="space-y-2 text-sm text-[var(--color-ink-muted)]">
-          <p>{site.address}</p>
-          <p>
-            <a href={`tel:${site.phone.replace(/[^\d]/g, "")}`}>{site.phone}</a>
-          </p>
-          <p>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-          </p>
-        </div>
-
-        <div className="social-row" aria-label="Social media links">
-          <a href={site.social.instagram} aria-label="Instagram" target="_blank" rel="noreferrer">
-            <SocialIcon label="IG" />
-          </a>
-          <a href={site.social.facebook} aria-label="Facebook" target="_blank" rel="noreferrer">
-            <SocialIcon label="FB" />
-          </a>
-          <a href={site.social.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer">
-            <SocialIcon label="IN" />
-          </a>
+          <div className="site-footer-brand-col">
+            <h2 className="font-display text-3xl">Beyond Balance</h2>
+            <p className="site-footer-tagline">
+              Personalized yoga for high-performing people who want to feel grounded,
+              present, and deeply well.
+            </p>
+          </div>
         </div>
       </footer>
     </>

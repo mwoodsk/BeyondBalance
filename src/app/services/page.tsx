@@ -48,7 +48,17 @@ export default function ServicesPage() {
 
       <Reveal className="mt-10 grid gap-5 md:grid-cols-2">
         {services.map((item) => (
-          <article key={item.title} className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-8">
+          <article
+            key={item.title}
+            id={
+              item.title === "Private Classes"
+                ? "private-classes"
+                : item.title === "Corporate Classes"
+                  ? "corporate-classes"
+                  : undefined
+            }
+            className="scroll-mt-32 rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-8"
+          >
             <h2 className="font-display text-4xl">{item.title}</h2>
             <p className="mt-2 text-sm uppercase tracking-[0.13em] text-[var(--color-sage)]">{item.forWho}</p>
             <p className="mt-5 text-[var(--color-ink-muted)]">{item.description}</p>
