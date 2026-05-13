@@ -1,8 +1,8 @@
 export const site = {
   name: "Beyond Balance",
-  phone: "(312) 555-0142",
+  phone: "(331)250-0446",
   email: "hello@beyondbalanceyoga.com",
-  address: "1212 W Evergreen Ave, Chicago, IL 60642",
+  address: "Chicago, IL",
   bookingUrl: "https://calendly.com/example/beyond-balance-intro",
   mindbodyUrl: "https://www.mindbodyonline.com/explore/locations/beyond-balance",
   social: {
@@ -15,7 +15,7 @@ export const site = {
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/classes", label: "Classes" },
+  { href: "/classes", label: "Classes (Offerings)" },
   { href: "/services", label: "Services" },
   { href: "/events", label: "Events" },
   { href: "/contact", label: "Contact" },
