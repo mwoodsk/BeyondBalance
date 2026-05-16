@@ -17,5 +17,5 @@ export const navLinks = [
   { href: "/services", label: "Offerings" },
   { href: "/events", label: "Events" },
   { href: "/contact", label: "Get in Touch" },
-  { href: "/about", label: "About Aspen Rose" },
+  { href: "/about", label: "About Me" },
 ];
