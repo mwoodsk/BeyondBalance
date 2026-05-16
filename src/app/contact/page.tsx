@@ -71,17 +71,6 @@ export default function ContactPage() {
             <p className="mt-2 text-[var(--color-ink-muted)]">{site.phone}</p>
             <p className="mt-2 text-[var(--color-ink-muted)]">{site.email}</p>
           </div>
-
-          <div className="overflow-hidden rounded-[2rem] border border-[var(--color-line)]">
-            <iframe
-              title="Beyond Balance location map"
-              src="https://www.google.com/maps?q=175+E+Delaware+Pl+Chicago+IL&output=embed"
-              width="100%"
-              height="320"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
         </Reveal>
       </div>
     </div>
